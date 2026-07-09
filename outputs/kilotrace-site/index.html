@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KiloTrace | Trace material loss. Recover margin.</title>
+    <meta
+      name="description"
+      content="KiloTrace is a material loss intelligence platform for manufacturers tracing scrap, rework, yield loss, root causes, and cost impact."
+    />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Primary">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="KiloTrace home">
+          <img src="assets/favicon.svg" alt="" />
+          <span>KiloTrace</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <div class="nav-product">
+            <button class="nav-product-trigger" type="button" aria-expanded="false">
+              Product <i data-lucide="chevron-down"></i>
+            </button>
+            <div class="product-menu" aria-label="Product menu">
+              <a href="track.html"><i data-lucide="scan-line"></i><span><strong>KiloTrace Track</strong><span>Capture scrap and rework events.</span></span></a>
+              <a href="root.html"><i data-lucide="git-branch"></i><span><strong>KiloTrace Root</strong><span>Find repeat root-cause signatures.</span></span></a>
+              <a href="cost.html"><i data-lucide="badge-euro"></i><span><strong>KiloTrace Cost</strong><span>Connect loss to financial impact.</span></span></a>
+            </div>
+          </div>
+          <a href="#pricing">Pricing</a>
+          <a href="demo.html">Contact</a>
+          <a href="#showcase">See product</a>
+          <a class="mobile-nav-only" href="signin.html">Sign in</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="signin.html">Sign in</a>
+          <a class="btn btn-primary" href="request-demo.html">Request demo <i data-lucide="arrow-up-right"></i></a>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" class="page">
+      <section class="hero">
+        <div class="motion-field" aria-hidden="true">
+          <div class="motion-grid"></div>
+          <span class="trace-line"></span>
+          <span class="trace-line"></span>
+          <span class="trace-line"></span>
+          <span class="trace-node"></span>
+          <span class="trace-node"></span>
+          <span class="trace-node"></span>
+        </div>
+        <div class="hero-inner">
+          <div class="hero-copy reveal">
+            <div class="eyebrow"><span></span> Material loss intelligence for EU manufacturers</div>
+            <h1>Trace material loss from shop floor to <em>margin recovery.</em></h1>
+            <p class="hero-lede">
+              KiloTrace connects scrap, rework, yield events, root-cause evidence, supplier lots, machines, shifts, and finance impact in one product-led operating layer.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="request-demo.html">Book a demo <i data-lucide="arrow-up-right"></i></a>
+              <a class="btn btn-ghost" href="#products">Explore platform <i data-lucide="move-right"></i></a>
+            </div>
+            <div class="hero-proof" aria-label="KiloTrace operating proof">
+              <div class="proof-pill">
+                <strong>4.8%</strong>
+                <span>typical recoverable margin hidden in scrap and rework patterns</span>
+              </div>
+              <div class="proof-pill">
+                <strong>21 days</strong>
+                <span>to first root-cause board for a pilot production line</span>
+              </div>
+              <div class="proof-pill">
+                <strong>PL/EU</strong>
+                <span>built for Polish and European manufacturing teams</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="glass-chip chip-a">
+              <strong>€428k</strong>
+              <span>scrap value tied back to batches, lines, suppliers, and GL accounts.</span>
+            </div>
+            <div class="dashboard-frame">
+              <img src="assets/dashboard-overview.png" alt="KiloTrace executive dashboard showing scrap value, yield, rework hours, and loss drivers" />
+            </div>
+            <div class="glass-chip chip-b">
+              <strong>37</strong>
+              <span>open investigations prioritized by financial exposure and repeat risk.</span>
+            </div>
+            <div class="glass-chip chip-c">
+              <strong>94.8%</strong>
+              <span>yield signal monitored across products, machines, and shifts.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-strip" aria-label="Industry focus">
+        <div class="section-inner">
+          <p>Designed for manufacturers where small yield losses become serious operating cost.</p>
+          <div class="logo-marquee" aria-label="Connected manufacturing systems">
+            <div class="logo-track">
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/sap/33464D" alt="SAP" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/siemens/33464D" alt="Siemens" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/snowflake/33464D" alt="Snowflake" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/rockwellautomation/33464D" alt="Rockwell Automation" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/databricks/33464D" alt="Databricks" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/postgresql/33464D" alt="PostgreSQL" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/mqtt/33464D" alt="MQTT" /></span>
+              <span class="logo-mark"><span class="logo-wordmark">OPC UA</span></span>
+            </div>
+            <div class="logo-track" aria-hidden="true">
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/sap/33464D" alt="" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/siemens/33464D" alt="" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/snowflake/33464D" alt="" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/rockwellautomation/33464D" alt="" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/databricks/33464D" alt="" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/postgresql/33464D" alt="" /></span>
+              <span class="logo-mark"><img src="https://cdn.simpleicons.org/mqtt/33464D" alt="" /></span>
+              <span class="logo-mark"><span class="logo-wordmark">OPC UA</span></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Why KiloTrace</p>
+          <h2 class="section-heading reveal">Scrap cost is visible in finance. The causes are scattered everywhere else.</h2>
+          <p class="section-copy reveal">
+            Most plants can see the monthly loss, but not the exact chain of shift, batch, machine, supplier lot, operator step, and process condition that created it. KiloTrace turns loss into traceable evidence.
+          </p>
+          <div class="story-grid">
+            <article class="story-card reveal">
+              <span class="story-index">01</span>
+              <h3>Capture events cleanly</h3>
+              <p>Track scrap, rework, reason codes, batch context, and shift notes without forcing teams into another spreadsheet ritual.</p>
+            </article>
+            <article class="story-card reveal">
+              <span class="story-index">02</span>
+              <h3>Connect the fingerprint</h3>
+              <p>Correlate material lots, machines, tooling, operators, suppliers, and process telemetry into one investigation trail.</p>
+            </article>
+            <article class="story-card reveal">
+              <span class="story-index">03</span>
+              <h3>Recover margin</h3>
+              <p>Translate production evidence into cost exposure, supplier claims, containment actions, and finance-ready reporting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-band" aria-label="Platform statistics">
+        <div class="section-inner stats-grid">
+          <div class="stats-intro reveal">
+            <h2>Built around practical manufacturing outcomes.</h2>
+            <p>Use KiloTrace to make loss conversations specific enough for production, quality, procurement, and finance to act together.</p>
+          </div>
+          <div class="stat-card reveal">
+            <strong><span class="count-up" data-target="18.4" data-decimals="1"></span>h</strong>
+            <span>average investigation cycle for repeat scrap signatures</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong><span class="count-up" data-prefix="€" data-target="116900"></span></strong>
+            <span>avoidable cost forecasted in a typical multi-line pilot</span>
+          </div>
+          <div class="stat-card reveal">
+            <strong><span class="count-up" data-target="96.2" data-decimals="1" data-suffix="%"></span></strong>
+            <span>batch events tagged with usable production context</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" class="section products">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Platform</p>
+          <h2 class="section-heading reveal">Three products, one material loss system.</h2>
+          <p class="section-copy reveal">
+            Start with the part of the problem your plant feels most: missing event context, slow root-cause work, or finance disconnect.
+          </p>
+          <div class="product-grid">
+            <article class="product-card reveal">
+              <header>
+                <span class="product-tag">KiloTrace Track</span>
+                <h3>Scrap and rework event capture</h3>
+                <p>Turn shift events into structured records tied to batches, machines, operators, parts, and reason codes.</p>
+              </header>
+              <div class="product-media">
+                <img src="assets/dashboard-track.png" alt="KiloTrace Track dashboard with event stream and batch heatmap" />
+              </div>
+              <footer>
+                <span>Built for quality and line leaders.</span>
+                <a class="learn-link" href="track.html">View Track <i data-lucide="arrow-right"></i></a>
+              </footer>
+            </article>
+            <article class="product-card reveal">
+              <header>
+                <span class="product-tag">KiloTrace Root</span>
+                <h3>Root-cause investigation workspace</h3>
+                <p>Connect evidence from supplier lots, equipment, tooling, process drift, and operator notes into one cause graph.</p>
+              </header>
+              <div class="product-media">
+                <img src="assets/dashboard-root.png" alt="KiloTrace Root dashboard showing cause graph and investigation evidence" />
+              </div>
+              <footer>
+                <span>Built for process engineering.</span>
+                <a class="learn-link" href="root.html">View Root <i data-lucide="arrow-right"></i></a>
+              </footer>
+            </article>
+            <article class="product-card reveal">
+              <header>
+                <span class="product-tag">KiloTrace Cost</span>
+                <h3>Finance-ready cost intelligence</h3>
+                <p>Bridge production loss into GL accounts, supplier exposure, recovery actions, and avoidable cost forecasts.</p>
+              </header>
+              <div class="product-media">
+                <img src="assets/dashboard-cost.png" alt="KiloTrace Cost dashboard with finance tie-out and cost records" />
+              </div>
+              <footer>
+                <span>Built for controllers and plant leaders.</span>
+                <a class="learn-link" href="cost.html">View Cost <i data-lucide="arrow-right"></i></a>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="showcase" class="section showcase">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Product screenshots</p>
+          <h2 class="section-heading reveal">A dashboard that looks like plant software because it is structured like plant work.</h2>
+          <p class="section-copy reveal">
+            KiloTrace keeps the interface calm: compact filters, clear tables, visible cost, and investigation state that teams can actually use in daily production meetings.
+          </p>
+          <div class="dashboard-showcase reveal">
+            <div class="showcase-tabs" role="tablist" aria-label="Dashboard views">
+              <button class="showcase-tab" type="button" data-screen="overview" aria-selected="true">
+                <strong>Executive overview</strong>
+                <span>Loss, yield, rework hours, and financial exposure in one plant view.</span>
+              </button>
+              <button class="showcase-tab" type="button" data-screen="track" aria-selected="false">
+                <strong>Track events</strong>
+                <span>Event stream, reason codes, and batch-machine-shift heatmaps.</span>
+              </button>
+              <button class="showcase-tab" type="button" data-screen="root" aria-selected="false">
+                <strong>Root causes</strong>
+                <span>Cause probability, material fingerprints, and investigation notes.</span>
+              </button>
+              <button class="showcase-tab" type="button" data-screen="cost" aria-selected="false">
+                <strong>Cost impact</strong>
+                <span>GL tie-outs, recoveries, supplier claims, and action status.</span>
+              </button>
+            </div>
+            <div class="showcase-screen">
+              <img class="active" data-screen="overview" src="assets/dashboard-overview.png" alt="KiloTrace overview dashboard" />
+              <img data-screen="track" src="assets/dashboard-track.png" alt="KiloTrace Track dashboard" />
+              <img data-screen="root" src="assets/dashboard-root.png" alt="KiloTrace Root dashboard" />
+              <img data-screen="cost" src="assets/dashboard-cost.png" alt="KiloTrace Cost dashboard" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section integrations">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Connected plant context</p>
+          <h2 class="section-heading reveal">A material fingerprint from every system that touches the batch.</h2>
+          <p class="section-copy reveal">
+            KiloTrace does not replace your plant stack. It connects the evidence layer across MES, ERP, quality systems, machine telemetry, and finance.
+          </p>
+          <div class="integration-map reveal" aria-label="Integration motion map">
+            <div class="integration-core">
+              <div>
+                <strong>KiloTrace</strong>
+                <span>Material fingerprint</span>
+              </div>
+            </div>
+            <div class="integration-node node-1">SAP / ERP</div>
+            <div class="integration-node node-2">MES events</div>
+            <div class="integration-node node-3">OPC UA</div>
+            <div class="integration-node node-4">QMS</div>
+            <div class="integration-node node-5">Power BI</div>
+            <div class="integration-node node-6">Snowflake</div>
+            <span class="moving-dot" style="top: 50%; left: 50%"></span>
+            <span class="moving-dot" style="top: 50%; left: 50%"></span>
+            <span class="moving-dot" style="top: 50%; left: 50%"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Before and after</p>
+          <h2 class="section-heading reveal">Less firefighting. More controlled loss reduction.</h2>
+          <div class="compare-grid">
+            <article class="compare-card legacy reveal">
+              <h3>Legacy tools</h3>
+              <ul>
+                <li><i data-lucide="x-circle"></i><span>Scrap is booked in finance, but root causes live in emails, notes, and shift memory.</span></li>
+                <li><i data-lucide="x-circle"></i><span>Teams debate which system is right before deciding what to do.</span></li>
+                <li><i data-lucide="x-circle"></i><span>Supplier claims are delayed because evidence is fragmented.</span></li>
+                <li><i data-lucide="x-circle"></i><span>Repeat problems look new every time they cross a shift boundary.</span></li>
+              </ul>
+            </article>
+            <article class="compare-card with-kilo reveal">
+              <h3>With KiloTrace</h3>
+              <ul>
+                <li><i data-lucide="check-circle-2"></i><span>Events, root causes, and cost exposure share one traceable material fingerprint.</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Production, quality, procurement, and finance work from the same evidence trail.</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Claims, containment, and recovery actions become finance-ready.</span></li>
+                <li><i data-lucide="check-circle-2"></i><span>Repeat signatures are recognized early across batches, lines, and shifts.</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Customer voice</p>
+          <h2 class="section-heading reveal">Built for real production conversations.</h2>
+          <div class="testimonial-shell reveal">
+            <article class="quote-card">
+              <blockquote data-quote>We finally stopped arguing about which shift caused the loss. KiloTrace gave us one shared trail from batch event to cost.</blockquote>
+              <cite data-cite>Ewa Zielińska, Quality Director, Novaplast Łódź</cite>
+            </article>
+            <div class="testimonial-list" role="tablist" aria-label="Testimonials">
+              <button class="testimonial-button" type="button" data-testimonial="ewa" aria-selected="true">
+                <span><strong>Ewa Zielińska</strong> Novaplast Łódź</span><i data-lucide="arrow-right"></i>
+              </button>
+              <button class="testimonial-button" type="button" data-testimonial="mateusz" aria-selected="false">
+                <span><strong>Mateusz Kowalczyk</strong> MetalForm Kraków</span><i data-lucide="arrow-right"></i>
+              </button>
+              <button class="testimonial-button" type="button" data-testimonial="anna" aria-selected="false">
+                <span><strong>Anna Wiśniewska</strong> Vistula Components</span><i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section pricing">
+        <div class="section-inner">
+          <p class="section-kicker reveal">Pricing</p>
+          <h2 class="section-heading reveal">Start with one line. Scale when the evidence is paying for itself.</h2>
+          <p class="section-copy reveal">
+            Pricing is built around plants, production lines, and the level of finance and supplier recovery workflow you need.
+          </p>
+          <button class="btn btn-quiet reveal" type="button" data-pricing-toggle aria-pressed="false">
+            <i data-lucide="refresh-cw"></i><span>Monthly pricing shown</span>
+          </button>
+          <div class="pricing-grid">
+            <article class="pricing-card reveal">
+              <span class="pricing-label">Pilot</span>
+              <h3>One production line</h3>
+              <p>For teams proving loss visibility and event capture on a focused process.</p>
+              <div class="price"><span data-monthly="€2,900" data-annual="€2,465">€2,900</span><span> / month</span></div>
+              <ul>
+                <li><i data-lucide="check"></i><span>KiloTrace Track</span></li>
+                <li><i data-lucide="check"></i><span>One plant line and 25 users</span></li>
+                <li><i data-lucide="check"></i><span>8-week onboarding plan</span></li>
+                <li><i data-lucide="check"></i><span>Standard dashboard pack</span></li>
+              </ul>
+              <a class="btn btn-quiet" href="request-demo.html">Plan pilot</a>
+            </article>
+            <article class="pricing-card featured reveal">
+              <span class="pricing-label">Plant</span>
+              <h3>Multi-line plant</h3>
+              <p>For plants connecting event capture, investigation, and cost impact.</p>
+              <div class="price"><span data-monthly="€7,800" data-annual="€6,630">€7,800</span><span> / month</span></div>
+              <ul>
+                <li><i data-lucide="check"></i><span>Track, Root, and Cost</span></li>
+                <li><i data-lucide="check"></i><span>Up to 8 production lines</span></li>
+                <li><i data-lucide="check"></i><span>ERP, MES, and QMS connectors</span></li>
+                <li><i data-lucide="check"></i><span>Supplier claim workflows</span></li>
+              </ul>
+              <a class="btn btn-primary" href="request-demo.html">Book plant demo</a>
+            </article>
+            <article class="pricing-card reveal">
+              <span class="pricing-label">Network</span>
+              <h3>Plant network</h3>
+              <p>For manufacturers standardizing material loss intelligence across sites.</p>
+              <div class="price"><span data-monthly="Custom" data-annual="Custom">Custom</span></div>
+              <ul>
+                <li><i data-lucide="check"></i><span>Multi-plant governance</span></li>
+                <li><i data-lucide="check"></i><span>Advanced data warehouse sync</span></li>
+                <li><i data-lucide="check"></i><span>Executive loss-recovery reporting</span></li>
+                <li><i data-lucide="check"></i><span>Dedicated solution engineer</span></li>
+              </ul>
+              <a class="btn btn-quiet" href="request-demo.html">Talk to sales</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section demo-band">
+        <div class="section-inner demo-panel reveal">
+          <div>
+            <p class="section-kicker">Book a demo</p>
+            <h2>Bring your scrap story into one room.</h2>
+            <p>
+              Share one recent loss problem and we will map how KiloTrace would connect events, root causes, and cost recovery across your plant.
+            </p>
+            <ul class="demo-list">
+              <li><i data-lucide="check"></i><span>30-minute discovery with a Polish manufacturing specialist</span></li>
+              <li><i data-lucide="check"></i><span>Example dashboard using your plant structure</span></li>
+              <li><i data-lucide="check"></i><span>Pilot scope and data readiness review</span></li>
+            </ul>
+          </div>
+          <div class="demo-form">
+            <div class="contact-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); box-shadow: none;">
+              <strong style="color: #fff;">What we prepare</strong>
+              <span style="color: rgba(255,255,255,0.72);">A sample workflow mapped to your plant structure, shifts, materials, and finance view.</span>
+            </div>
+            <div class="contact-card" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); box-shadow: none;">
+              <strong style="color: #fff;">Who joins</strong>
+              <span style="color: rgba(255,255,255,0.72);">A KiloTrace manufacturing specialist plus a process or finance workflow lead.</span>
+            </div>
+            <a class="btn btn-primary" href="request-demo.html">Open demo request <i data-lucide="arrow-up-right"></i></a>
+            <p class="form-note">KiloTrace sp. z o.o. replies from Kraków during Central European business hours.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/favicon.svg" alt="" />
+          <strong>KiloTrace</strong>
+          <p>Material loss intelligence for manufacturers with scrap, rework, yield, and margin recovery problems.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Platform</h3>
+          <a href="track.html">KiloTrace Track</a>
+          <a href="root.html">KiloTrace Root</a>
+          <a href="cost.html">KiloTrace Cost</a>
+          <a href="#showcase">Dashboards</a>
+        </div>
+        <div class="footer-col">
+          <h3>Applications</h3>
+          <a href="#">Scrap reduction</a>
+          <a href="#">Rework control</a>
+          <a href="#">Supplier recovery</a>
+          <a href="#">Yield improvement</a>
+        </div>
+        <div class="footer-col">
+          <h3>Company</h3>
+          <a href="demo.html">Contact</a>
+          <a href="request-demo.html">Book a demo</a>
+          <a href="signin.html">Sign in</a>
+          <a href="#">EU data hosting</a>
+        </div>
+        <div class="footer-col">
+          <h3>Poland office</h3>
+          <span>KiloTrace sp. z o.o.</span>
+          <span>ul. Zabłocie 25/12</span>
+          <span>30-701 Kraków, Polska</span>
+          <a href="mailto:hello@kilotrace.eu">hello@kilotrace.eu</a>
+          <a href="tel:+48123074128">+48 12 307 41 28</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 KiloTrace sp. z o.o. All rights reserved.</span>
+        <span>Privacy · Terms · Data processing agreement</span>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

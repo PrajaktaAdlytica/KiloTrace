@@ -1,0 +1,127 @@
+{
+  "brand": {
+    "name": "KiloTrace",
+    "category": "Material loss intelligence for manufacturers",
+    "tagline": "Trace material loss. Recover margin."
+  },
+  "color": {
+    "primitive": {
+      "ink-950": "#061115",
+      "ink-900": "#071D24",
+      "ink-800": "#0B2B34",
+      "ink-700": "#123943",
+      "slate-700": "#33464D",
+      "slate-500": "#6D7D82",
+      "slate-300": "#B7C2C2",
+      "mist-100": "#EEF5F3",
+      "mist-50": "#F7FAF8",
+      "white": "#FFFFFF",
+      "trace-teal": "#25C7B7",
+      "signal-amber": "#F3C84B",
+      "yield-green": "#78C87A",
+      "scrap-red": "#E15B4F",
+      "process-blue": "#4B9FE8"
+    },
+    "semantic": {
+      "bg-primary": "{color.primitive.mist-50}",
+      "bg-elevated": "{color.primitive.white}",
+      "bg-dark": "{color.primitive.ink-950}",
+      "bg-dark-elevated": "{color.primitive.ink-800}",
+      "text-primary": "{color.primitive.ink-950}",
+      "text-secondary": "{color.primitive.slate-700}",
+      "text-muted": "{color.primitive.slate-500}",
+      "text-inverse": "{color.primitive.white}",
+      "border-subtle": "#DDE7E5",
+      "border-dark": "rgba(255,255,255,0.14)",
+      "accent-primary": "{color.primitive.trace-teal}",
+      "accent-cta": "{color.primitive.signal-amber}",
+      "accent-success": "{color.primitive.yield-green}",
+      "accent-danger": "{color.primitive.scrap-red}",
+      "accent-data": "{color.primitive.process-blue}"
+    },
+    "glass": {
+      "dark-fill": "rgba(8,24,30,0.58)",
+      "dark-border": "rgba(255,255,255,0.16)",
+      "dark-highlight": "rgba(255,255,255,0.10)",
+      "light-fill": "rgba(255,255,255,0.62)",
+      "light-border": "rgba(255,255,255,0.70)"
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    },
+    "weight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600
+    },
+    "letterSpacing": "0px",
+    "desktop": {
+      "display": { "fontSize": 64, "lineHeight": 72, "fontWeight": 600 },
+      "h1": { "fontSize": 56, "lineHeight": 64, "fontWeight": 600 },
+      "h2": { "fontSize": 40, "lineHeight": 48, "fontWeight": 600 },
+      "h3": { "fontSize": 28, "lineHeight": 36, "fontWeight": 600 },
+      "h4": { "fontSize": 22, "lineHeight": 30, "fontWeight": 500 },
+      "body-lg": { "fontSize": 20, "lineHeight": 32, "fontWeight": 400 },
+      "body": { "fontSize": 16, "lineHeight": 26, "fontWeight": 400 },
+      "body-sm": { "fontSize": 14, "lineHeight": 22, "fontWeight": 400 },
+      "label": { "fontSize": 13, "lineHeight": 18, "fontWeight": 500 },
+      "metric": { "fontSize": 40, "lineHeight": 48, "fontWeight": 500 }
+    },
+    "mobile": {
+      "h1": { "fontSize": 40, "lineHeight": 46, "fontWeight": 600 },
+      "h2": { "fontSize": 32, "lineHeight": 40, "fontWeight": 600 },
+      "h3": { "fontSize": 24, "lineHeight": 32, "fontWeight": 600 },
+      "body-lg": { "fontSize": 18, "lineHeight": 28, "fontWeight": 400 },
+      "body": { "fontSize": 16, "lineHeight": 25, "fontWeight": 400 }
+    }
+  },
+  "space": {
+    "2": 2,
+    "4": 4,
+    "8": 8,
+    "12": 12,
+    "16": 16,
+    "20": 20,
+    "24": 24,
+    "32": 32,
+    "40": 40,
+    "48": 48,
+    "64": 64,
+    "80": 80,
+    "104": 104,
+    "128": 128
+  },
+  "radius": {
+    "xs": 4,
+    "sm": 6,
+    "md": 8,
+    "lg": 12,
+    "xl": 18,
+    "glass": 24,
+    "pill": 999
+  },
+  "layout": {
+    "contentMaxWidth": 1200,
+    "visualMaxWidth": 1440,
+    "dashboardMaxWidth": 1280,
+    "columns": 12,
+    "columnGap": 24,
+    "marginDesktop": 80,
+    "marginLaptop": 48,
+    "marginTablet": 32,
+    "marginMobile": 20,
+    "sectionPaddingDesktop": 104,
+    "sectionPaddingTablet": 72,
+    "sectionPaddingMobile": 56
+  },
+  "motion": {
+    "heroLoopSeconds": [12, 18],
+    "cardEntranceMs": [500, 700],
+    "scrollRevealMs": [400, 600],
+    "counterMs": [900, 1400],
+    "hoverMs": [160, 220],
+    "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+  }
+}

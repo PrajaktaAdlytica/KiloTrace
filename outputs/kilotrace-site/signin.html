@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in to KiloTrace | Material loss intelligence</title>
+    <meta name="description" content="Sign in to the KiloTrace material loss intelligence workspace for manufacturers." />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Primary">
+      <div class="nav-shell">
+        <a class="brand" href="index.html" aria-label="KiloTrace home"><img src="assets/favicon.svg" alt="" /><span>KiloTrace</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <div class="nav-product">
+            <button class="nav-product-trigger" type="button" aria-expanded="false">Product <i data-lucide="chevron-down"></i></button>
+            <div class="product-menu" aria-label="Product menu">
+              <a href="track.html"><i data-lucide="scan-line"></i><span><strong>KiloTrace Track</strong><span>Capture scrap and rework events.</span></span></a>
+              <a href="root.html"><i data-lucide="git-branch"></i><span><strong>KiloTrace Root</strong><span>Find repeat root-cause signatures.</span></span></a>
+              <a href="cost.html"><i data-lucide="badge-euro"></i><span><strong>KiloTrace Cost</strong><span>Connect loss to financial impact.</span></span></a>
+            </div>
+          </div>
+          <a href="index.html#pricing">Pricing</a>
+          <a href="demo.html">Contact</a>
+          <a href="index.html#showcase">See product</a>
+          <a class="mobile-nav-only" href="signin.html" aria-current="page">Sign in</a>
+        </nav>
+        <div class="nav-actions"><a class="btn btn-ghost" href="signin.html" aria-current="page">Sign in</a><a class="btn btn-primary" href="request-demo.html">Request demo <i data-lucide="arrow-up-right"></i></a></div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+      </div>
+    </header>
+
+    <main id="main" class="signin-page">
+      <section class="signin-shell">
+        <div class="signin-copy reveal">
+          <p class="section-kicker">KiloTrace workspace</p>
+          <h1>Return to your plant loss trail.</h1>
+          <p>Review scrap events, root-cause evidence, supplier context, and cost recovery actions from one secure EU-hosted workspace.</p>
+          <div class="signin-proof">
+            <span><i data-lucide="shield-check"></i> EU data hosting</span>
+            <span><i data-lucide="factory"></i> Multi-plant roles</span>
+            <span><i data-lucide="fingerprint"></i> Material fingerprints</span>
+          </div>
+        </div>
+
+        <form class="signin-card reveal" data-auth-form>
+          <div class="form-success" role="status">Demo mode: this sign-in page is ready for authentication wiring.</div>
+          <h2>Sign in</h2>
+          <p>Use your company email to access KiloTrace.</p>
+          <div class="field">
+            <label for="signin-email">Work email</label>
+            <input id="signin-email" type="email" name="email" placeholder="anna@produkcja.pl" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="signin-password">Password</label>
+            <input id="signin-password" type="password" name="password" placeholder="Enter password" autocomplete="current-password" required />
+          </div>
+          <div class="signin-options">
+            <label><input type="checkbox" name="remember" /> Remember me</label>
+            <a href="demo.html">Need access?</a>
+          </div>
+          <button class="btn btn-primary" type="submit">Sign in <i data-lucide="arrow-right"></i></button>
+          <div class="auth-provider-grid">
+            <button class="btn btn-ghost" type="button"><img class="auth-logo" src="https://cdn.simpleicons.org/google" alt="" /> Continue with Google</button>
+            <button class="btn btn-ghost" type="button"><i data-lucide="building-2"></i> Continue with Microsoft</button>
+          </div>
+          <p class="form-note">For pilot access, ask your KiloTrace workspace admin or contact hello@kilotrace.eu.</p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="assets/favicon.svg" alt="" /><strong>KiloTrace</strong><p>Material loss intelligence for manufacturers with scrap, rework, yield, and margin recovery problems.</p></div>
+        <div class="footer-col"><h3>Platform</h3><a href="track.html">KiloTrace Track</a><a href="root.html">KiloTrace Root</a><a href="cost.html">KiloTrace Cost</a><a href="index.html#showcase">Dashboards</a></div>
+        <div class="footer-col"><h3>Applications</h3><a href="#">Scrap reduction</a><a href="#">Rework control</a><a href="#">Supplier recovery</a><a href="#">Yield improvement</a></div>
+        <div class="footer-col"><h3>Company</h3><a href="demo.html">Contact</a><a href="request-demo.html">Book a demo</a><a href="signin.html">Sign in</a><a href="#">EU data hosting</a></div>
+        <div class="footer-col"><h3>Poland office</h3><span>KiloTrace sp. z o.o.</span><span>ul. Zabłocie 25/12</span><span>30-701 Kraków, Polska</span><a href="mailto:hello@kilotrace.eu">hello@kilotrace.eu</a><a href="tel:+48123074128">+48 12 307 41 28</a></div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 KiloTrace sp. z o.o. All rights reserved.</span><span>Privacy · Terms · Data processing agreement</span></div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

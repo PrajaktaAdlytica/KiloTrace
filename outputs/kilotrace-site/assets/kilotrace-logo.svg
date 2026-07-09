@@ -1,0 +1,17 @@
+<svg width="920" height="220" viewBox="0 0 920 220" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">KiloTrace logo</title>
+  <desc id="desc">KiloTrace Material Fingerprint logo with a fingerprint trace mark and wordmark.</desc>
+  <rect width="920" height="220" rx="28" fill="#F7FAF8"/>
+  <g transform="translate(64 42)">
+    <rect width="136" height="136" rx="30" fill="#061115"/>
+    <path d="M31 95C31 67.94 52.94 46 80 46C107.06 46 129 67.94 129 95" stroke="#25C7B7" stroke-width="7" stroke-linecap="round"/>
+    <path d="M45 95C45 75.67 60.67 60 80 60C99.33 60 115 75.67 115 95" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+    <path d="M59 95C59 83.4 68.4 74 80 74C91.6 74 101 83.4 101 95" stroke="#25C7B7" stroke-width="7" stroke-linecap="round"/>
+    <path d="M72 95C72 90.58 75.58 87 80 87C84.42 87 88 90.58 88 95" stroke="#25C7B7" stroke-width="7" stroke-linecap="round"/>
+    <rect x="46" y="98" width="68" height="8" rx="4" fill="#F3C84B"/>
+    <circle cx="42" cy="102" r="12" fill="#F3C84B"/>
+    <circle cx="118" cy="102" r="12" fill="#F3C84B"/>
+  </g>
+  <text x="238" y="116" font-family="Inter, Geist, Arial, sans-serif" font-size="72" font-weight="600" letter-spacing="0" fill="#061115">KiloTrace</text>
+  <text x="242" y="158" font-family="Inter, Geist, Arial, sans-serif" font-size="24" font-weight="500" letter-spacing="0" fill="#25C7B7">Material Fingerprint</text>
+</svg>

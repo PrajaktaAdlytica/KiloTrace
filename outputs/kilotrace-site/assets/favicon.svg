@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="KiloTrace favicon">
+  <rect width="64" height="64" rx="16" fill="#061115"/>
+  <path d="M8 45C8 31.745 18.745 21 32 21C45.255 21 56 31.745 56 45" stroke="#25C7B7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M15 45C15 35.611 22.611 28 32 28C41.389 28 49 35.611 49 45" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <path d="M22 45C22 39.477 26.477 35 32 35C37.523 35 42 39.477 42 45" stroke="#25C7B7" stroke-width="4" stroke-linecap="round"/>
+  <path d="M28 45C28 42.791 29.791 41 32 41C34.209 41 36 42.791 36 45" stroke="#25C7B7" stroke-width="4" stroke-linecap="round"/>
+  <rect x="14" y="47" width="36" height="5" rx="2.5" fill="#F3C84B"/>
+  <circle cx="13" cy="49.5" r="6" fill="#F3C84B"/>
+  <circle cx="51" cy="49.5" r="6" fill="#F3C84B"/>
+</svg>
