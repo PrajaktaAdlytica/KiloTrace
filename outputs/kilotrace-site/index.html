@@ -26,8 +26,60 @@
       }
     </script>
   </head>
-  <body>
+  <body class="entry-in-view intro-option-2">
     <a class="skip-link" href="#main">Skip to content</a>
+    <section class="entry-portal" id="entry" aria-label="KiloTrace material trace introduction">
+      <div class="entry-stage">
+        <img
+          class="entry-film entry-film--pulse"
+          src="assets/entry-material-pulse.png"
+          alt=""
+        />
+        <video
+          class="entry-film entry-film--reverse"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          poster="assets/entry-reverse-trace-poster.png"
+          aria-hidden="true"
+        >
+          <source src="assets/entry-reverse-trace.mp4" type="video/mp4" />
+        </video>
+        <div class="entry-vignette" aria-hidden="true"></div>
+        <a class="entry-brand" href="#main" data-entry-exit aria-label="Enter KiloTrace">
+          <img src="assets/favicon.svg" alt="" />
+          <span>KiloTrace</span>
+        </a>
+        <button class="entry-skip" type="button" data-entry-exit>
+          Skip intro <i data-lucide="arrow-down"></i>
+        </button>
+        <div
+          class="entry-caption"
+          role="group"
+          aria-label="Scrap cost is visible. Root causes disappear across machines, batches, shifts, and suppliers. KiloTrace follows every loss backward to its source."
+        >
+          <p class="entry-caption-line"><span>Scrap cost</span> is visible.</p>
+          <p class="entry-caption-line">Root causes disappear across machines, batches, shifts, and suppliers.</p>
+          <p class="entry-caption-line"><span>KiloTrace</span> follows every loss backward.</p>
+          <p class="entry-caption-line entry-caption-line--static"><span>Trace loss</span> back to its source.</p>
+        </div>
+        <svg class="entry-trace" viewBox="0 0 1664 936" preserveAspectRatio="none" aria-hidden="true">
+          <path class="entry-trace-rail" d="M 650 790 C 790 842, 906 793, 965 681 S 1094 541, 1238 491 S 1412 423, 1560 363" />
+          <path class="entry-trace-live" d="M 650 790 C 790 842, 906 793, 965 681 S 1094 541, 1238 491 S 1412 423, 1560 363" />
+          <circle class="entry-loss-halo" cx="1062" cy="570" r="19" />
+          <circle class="entry-loss-core" cx="1062" cy="570" r="6" />
+          <circle class="entry-signal" cx="650" cy="790" r="7" />
+        </svg>
+        <div class="entry-scan" aria-hidden="true"></div>
+        <div class="entry-progress" aria-hidden="true"><span></span></div>
+        <button class="entry-enter" type="button" data-entry-exit aria-label="Enter KiloTrace website">
+          <span>Enter</span>
+          <i data-lucide="arrow-down"></i>
+        </button>
+      </div>
+    </section>
     <header class="site-header" aria-label="Primary">
       <div class="nav-shell">
         <a class="brand" href="index.html" aria-label="KiloTrace home">
@@ -517,6 +569,7 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="assets/vendor/lenis-1.3.26.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>

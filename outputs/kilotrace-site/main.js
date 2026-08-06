@@ -1,4 +1,24 @@
 const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let siteLenis = null;
+
+function initLenis() {
+  if (!window.Lenis || prefersReduced) return;
+
+  siteLenis = new window.Lenis({
+    duration: 1.15,
+    smoothWheel: true,
+    syncTouch: false,
+  });
+
+  siteLenis.on("scroll", () => window.ScrollTrigger?.update());
+
+  const raf = (time) => {
+    siteLenis.raf(time);
+    requestAnimationFrame(raf);
+  };
+
+  requestAnimationFrame(raf);
+}
 
 function initIcons() {
   if (window.lucide) {
@@ -47,6 +67,144 @@ function initProductMenu() {
       if (event.key === "Escape") close();
     });
   });
+}
+
+function initEntryPortal() {
+  const entry = document.querySelector(".entry-portal");
+  const main = document.querySelector("#main");
+  if (!entry || !main) return;
+
+  const requestedVariant = new URLSearchParams(window.location.search).get("intro");
+  const variant = requestedVariant === "1" ? "1" : "2";
+  document.body.classList.toggle("intro-option-1", variant === "1");
+  document.body.classList.toggle("intro-option-2", variant === "2");
+
+  const reverseVideo = entry.querySelector(".entry-film--reverse");
+  if (prefersReduced && reverseVideo) reverseVideo.pause();
+
+  const updateHeader = () => {
+    document.body.classList.toggle("entry-in-view", entry.getBoundingClientRect().bottom > 120);
+  };
+
+  const enterSite = () => {
+    if (siteLenis) {
+      siteLenis.scrollTo(main, { duration: 1.15, offset: 0 });
+      return;
+    }
+    main.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", block: "start" });
+  };
+
+  entry.querySelectorAll("[data-entry-exit]").forEach((control) => {
+    control.addEventListener("click", (event) => {
+      event.preventDefault();
+      enterSite();
+    });
+  });
+
+  window.addEventListener("scroll", updateHeader, { passive: true });
+  window.addEventListener("resize", updateHeader);
+  updateHeader();
+
+  if (!window.gsap || prefersReduced) return;
+
+  const { gsap } = window;
+  if (window.MotionPathPlugin) gsap.registerPlugin(window.MotionPathPlugin);
+
+  if (variant === "1") {
+    gsap.to(".entry-film--pulse", {
+      scale: 1.08,
+      xPercent: -1.4,
+      yPercent: -0.6,
+      duration: 8,
+      ease: "sine.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+  }
+
+  if (variant === "2") {
+    const captionLines = gsap.utils.toArray(".entry-caption-line");
+    const progressBar = entry.querySelector(".entry-progress span");
+    const beats = [
+      { start: 0.55, end: 2.5 },
+      { start: 2.75, end: 5.4 },
+      { start: 5.65, end: 8.25 },
+      { start: 8.5, end: 11.5 },
+    ];
+    const narrative = gsap.timeline({ paused: true });
+
+    captionLines.forEach((line, index) => {
+      const beat = beats[index];
+      narrative
+        .fromTo(
+          line,
+          { autoAlpha: 0, y: 18 },
+          { autoAlpha: 1, y: 0, duration: 0.52, ease: "power3.out" },
+          beat.start,
+        )
+        .to(line, { autoAlpha: 0, y: -10, duration: 0.42, ease: "power2.in" }, beat.end - 0.42);
+    });
+
+    narrative.to({}, { duration: 0.01 }, 11.99);
+
+    const syncNarrative = () => {
+      const currentTime = Math.min(reverseVideo.currentTime || 0, 11.99);
+      narrative.time(currentTime, false);
+      if (progressBar && reverseVideo.duration) {
+        gsap.set(progressBar, { scaleX: currentTime / reverseVideo.duration });
+      }
+    };
+
+    reverseVideo.addEventListener("timeupdate", syncNarrative);
+    reverseVideo.addEventListener("seeked", syncNarrative);
+    reverseVideo.addEventListener("loadedmetadata", syncNarrative);
+    syncNarrative();
+    return;
+  }
+
+  const progress = gsap.timeline({ repeat: -1, repeatDelay: 0.8 });
+  progress.fromTo(".entry-progress span", { scaleX: 0 }, { scaleX: 1, duration: 7.2, ease: "none" }, 0);
+
+  const livePath = entry.querySelector(".entry-trace-live");
+  const pathLength = livePath?.getTotalLength() || 1600;
+
+  gsap.set(livePath, {
+    strokeDasharray: pathLength,
+    strokeDashoffset: pathLength,
+  });
+  gsap.set(".entry-signal", { transformOrigin: "50% 50%" });
+  gsap.set(".entry-loss-halo, .entry-loss-core", { opacity: 0, scale: 0.55, transformOrigin: "50% 50%" });
+
+  gsap.to(".entry-scan", {
+    opacity: 0.64,
+    scale: 1.08,
+    duration: 3.4,
+    ease: "sine.inOut",
+    repeat: -1,
+    yoyo: true,
+  });
+
+  progress
+    .to(livePath, { strokeDashoffset: 0, duration: 5.8, ease: "power1.inOut" }, 0.35)
+    .to(
+      ".entry-signal",
+      {
+        motionPath: {
+          path: livePath,
+          align: livePath,
+          alignOrigin: [0.5, 0.5],
+          start: 0,
+          end: 1,
+        },
+        duration: 5.8,
+        ease: "power1.inOut",
+      },
+      0.35,
+    )
+    .to(".entry-loss-halo, .entry-loss-core", { opacity: 1, scale: 1, duration: 0.24, ease: "back.out(2)" }, 3.48)
+    .to(".entry-loss-halo", { scale: 1.72, opacity: 0, duration: 0.9, ease: "power2.out" }, 3.78)
+    .to(".entry-loss-core", { opacity: 0.5, duration: 0.65, yoyo: true, repeat: 1 }, 3.78)
+    .to(livePath, { opacity: 0.3, duration: 0.6 }, 6.5);
 }
 
 function initGsap() {
@@ -273,6 +431,8 @@ function initForms() {
 
 document.addEventListener("DOMContentLoaded", () => {
   initIcons();
+  initLenis();
+  initEntryPortal();
   initMenu();
   initProductMenu();
   initDashboardShowcase();
